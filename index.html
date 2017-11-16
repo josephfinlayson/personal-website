@@ -1,869 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta name="theme-color" content="#444444">
-        <title>Joseph Finlayson</title>
-        <meta name="description" content="Full Stack Digital Consultant">
-        <meta name="keywords" content="berlin, developer, react, ruby, spring, node, javascript, java">
-        <style type="text/css">
-            @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);@-ms-viewport {
-                width: device-width
-            }
-
-            @font-face {
-                font-family: funky;
-                src: url(fonts/keepcalm-medium-webfont.woff2) format("woff2"),url(fonts/keepcalm-medium-webfont.woff) format("woff")
-            }
-
-            html {
-                font-family: sans-serif;
-                -ms-text-size-adjust: 100%;
-                -webkit-text-size-adjust: 100%
-            }
-
-            body {
-                margin: 0
-            }
-
-            nav {
-                display: block
-            }
-
-            a {
-                background-color: transparent
-            }
-
-            b {
-                font-weight: 700
-            }
-
-            button {
-                color: inherit;
-                font: inherit;
-                margin: 0
-            }
-
-            button {
-                overflow: visible
-            }
-
-            button {
-                text-transform: none
-            }
-
-            button {
-                -webkit-appearance: button
-            }
-
-            button::-moz-focus-inner {
-                border: 0;
-                padding: 0
-            }
-
-            * {
-                -webkit-box-sizing: border-box;
-                -moz-box-sizing: border-box;
-                box-sizing: border-box
-            }
-
-            :after,:before {
-                -webkit-box-sizing: border-box;
-                -moz-box-sizing: border-box;
-                box-sizing: border-box
-            }
-
-            html {
-                font-size: 10px
-            }
-
-            body {
-                font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
-                font-size: 13px;
-                line-height: 1.846;
-                color: #666;
-                background-color: #fff
-            }
-
-            button {
-                font-family: inherit;
-                font-size: inherit;
-                line-height: inherit
-            }
-
-            a {
-                color: #2196f3;
-                text-decoration: none
-            }
-
-            .sr-only {
-                position: absolute;
-                width: 1px;
-                height: 1px;
-                margin: -1px;
-                padding: 0;
-                overflow: hidden;
-                clip: rect(0,0,0,0);
-                border: 0
-            }
-
-            h3 {
-                font-family: inherit;
-                font-weight: 400;
-                line-height: 1.1;
-                color: #444
-            }
-
-            h3 {
-                margin-top: 23px;
-                margin-bottom: 11.5px
-            }
-
-            h3 {
-                font-size: 34px
-            }
-
-            p {
-                margin: 0 0 11.5px
-            }
-
-            .lead {
-                margin-bottom: 23px;
-                font-size: 14px;
-                font-weight: 300;
-                line-height: 1.4
-            }
-
-            .text-center {
-                text-align: center
-            }
-
-            ul {
-                margin-top: 0;
-                margin-bottom: 11.5px
-            }
-
-            .container {
-                margin-right: auto;
-                margin-left: auto;
-                padding-left: 15px;
-                padding-right: 15px
-            }
-
-            @media (min-width: 768px) {
-                .lead {
-                    font-size:19.5px
-                }
-
-                .container {
-                    width: 750px
-                }
-            }
-
-            @media (min-width: 992px) {
-                .container {
-                    width:970px
-                }
-            }
-
-            @media (min-width: 1200px) {
-                .container {
-                    width:1170px
-                }
-            }
-
-            .row {
-                margin-left: -15px;
-                margin-right: -15px
-            }
-
-            .col-md-6,.col-xs-12 {
-                position: relative;
-                min-height: 1px;
-                padding-left: 15px;
-                padding-right: 15px
-            }
-
-            .col-xs-12 {
-                float: left
-            }
-
-            .col-xs-12 {
-                width: 100%
-            }
-
-            @media (min-width: 992px) {
-                .col-md-6 {
-                    float:left
-                }
-
-                .col-md-6 {
-                    width: 50%
-                }
-
-                .col-md-offset-3 {
-                    margin-left: 25%
-                }
-            }
-
-            .collapse {
-                display: none
-            }
-
-            .nav {
-                margin-bottom: 0;
-                padding-left: 0;
-                list-style: none
-            }
-
-            .nav>li {
-                position: relative;
-                display: block
-            }
-
-            .nav>li>a {
-                position: relative;
-                display: block;
-                padding: 10px 15px
-            }
-
-            .navbar {
-                position: relative;
-                min-height: 64px;
-                margin-bottom: 23px;
-                border: 1px solid transparent
-            }
-
-            .navbar-collapse {
-                overflow-x: visible;
-                padding-right: 15px;
-                padding-left: 15px;
-                border-top: 1px solid transparent;
-                -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
-                box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
-                -webkit-overflow-scrolling: touch
-            }
-
-            .navbar-fixed-top .navbar-collapse {
-                max-height: 340px
-            }
-
-            @media (max-device-width: 480px) and (orientation:landscape) {
-                .navbar-fixed-top .navbar-collapse {
-                    max-height:200px
-                }
-            }
-
-            .container>.navbar-collapse,.container>.navbar-header {
-                margin-right: -15px;
-                margin-left: -15px
-            }
-
-            .navbar-fixed-top {
-                position: fixed;
-                right: 0;
-                left: 0;
-                z-index: 1030
-            }
-
-            @media (min-width: 768px) {
-                .navbar {
-                    border-radius:3px
-                }
-
-                .navbar-header {
-                    float: left
-                }
-
-                .navbar-collapse {
-                    width: auto;
-                    border-top: 0;
-                    -webkit-box-shadow: none;
-                    box-shadow: none
-                }
-
-                .navbar-collapse.collapse {
-                    display: block!important;
-                    height: auto!important;
-                    padding-bottom: 0;
-                    overflow: visible!important
-                }
-
-                .navbar-fixed-top .navbar-collapse {
-                    padding-left: 0;
-                    padding-right: 0
-                }
-
-                .container>.navbar-collapse,.container>.navbar-header {
-                    margin-right: 0;
-                    margin-left: 0
-                }
-
-                .navbar-fixed-top {
-                    border-radius: 0
-                }
-
-                .navbar-toggle {
-                    display: none
-                }
-            }
-
-            .navbar-fixed-top {
-                top: 0;
-                border-width: 0 0 1px
-            }
-
-            .navbar-toggle {
-                position: relative;
-                float: right;
-                margin-right: 15px;
-                padding: 9px 10px;
-                margin-top: 15px;
-                margin-bottom: 15px;
-                background-color: transparent;
-                background-image: none;
-                border: 1px solid transparent;
-                border-radius: 3px
-            }
-
-            .navbar-toggle .icon-bar {
-                display: block;
-                width: 22px;
-                height: 2px;
-                border-radius: 1px
-            }
-
-            .navbar-toggle .icon-bar+.icon-bar {
-                margin-top: 4px
-            }
-
-            .navbar-nav {
-                margin: 10.25px -15px
-            }
-
-            .navbar-nav>li>a {
-                padding-top: 10px;
-                padding-bottom: 10px;
-                line-height: 23px
-            }
-
-            @media (min-width: 768px) {
-                .navbar-nav {
-                    float:left;
-                    margin: 0
-                }
-
-                .navbar-nav>li {
-                    float: left
-                }
-
-                .navbar-nav>li>a {
-                    padding-top: 20.5px;
-                    padding-bottom: 20.5px
-                }
-
-                .navbar-right {
-                    float: right!important;
-                    margin-right: -15px
-                }
-            }
-
-            .container:after,.container:before,.nav:after,.nav:before,.navbar-collapse:after,.navbar-collapse:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before,.row:after,.row:before {
-                content: " ";
-                display: table
-            }
-
-            .container:after,.nav:after,.navbar-collapse:after,.navbar-header:after,.navbar:after,.row:after {
-                clear: both
-            }
-
-            .navbar {
-                border: none;
-                -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.3);
-                box-shadow: 0 1px 2px rgba(0,0,0,.3)
-            }
-
-            body {
-                -webkit-font-smoothing: antialiased;
-                letter-spacing: .1px
-            }
-
-            p {
-                margin: 0 0 1em
-            }
-
-            button {
-                -webkit-font-smoothing: antialiased;
-                letter-spacing: .1px
-            }
-
-            .component-fullscreen {
-                height: 100%;
-                height: 100vh;
-                display: flex;
-                align-content: center;
-                align-items: center;
-                justify-content: center;
-                background-size: cover;
-                background-position: center center;
-                position: relative
-            }
-
-            .mask {
-                position: absolute;
-                top: 0;
-                right: 0;
-                left: 0;
-                bottom: 0;
-                background-color: rgba(0,0,0,.38)
-            }
-
-            .text-white {
-                color: #fff!important
-            }
-
-            .funky {
-                font-family: funky,sans-serif
-            }
-
-            .navbar {
-                background: 0 0;
-                border: 0;
-                box-shadow: none
-            }
-
-            .navbar li a {
-                color: #fff
-            }
-
-            @media all and (max-width: 767px) {
-                .navbar {
-                    background:#fff
-                }
-
-                .navbar.collapsed {
-                    background: 0 0
-                }
-
-                .navbar.collapsed li a {
-                    color: #fff
-                }
-
-                .navbar li a {
-                    color: #444!important
-                }
-
-                .navbar.collapsed .icon-bar {
-                    background-color: #fff
-                }
-            }
-
-            .icon-bar {
-                background-color: #444
-            }
-
-            h3 {
-                line-height: normal
-            }
-        </style>
-        <link href="css/main.css" rel="preload" as="style" onload='this.rel="stylesheet"'>
-        <noscript>
-            <link href="css/main.css" rel="stylesheet">
-        </noscript>
-        <script>
-            !function(e) {
-                "use strict";
-                var t = function(t, n, r) {
-                    function o(e) {
-                        if (i.body)
-                            return e();
-                        setTimeout(function() {
-                            o(e)
-                        })
-                    }
-                    function a() {
-                        d.addEventListener && d.removeEventListener("load", a),
-                        d.media = r || "all"
-                    }
-                    var l, i = e.document, d = i.createElement("link");
-                    if (n)
-                        l = n;
-                    else {
-                        var s = (i.body || i.getElementsByTagName("head")[0]).childNodes;
-                        l = s[s.length - 1]
-                    }
-                    var u = i.styleSheets;
-                    d.rel = "stylesheet",
-                    d.href = t,
-                    d.media = "only x",
-                    o(function() {
-                        l.parentNode.insertBefore(d, n ? l : l.nextSibling)
-                    });
-                    var f = function(e) {
-                        for (var t = d.href, n = u.length; n--; )
-                            if (u[n].href === t)
-                                return e();
-                        setTimeout(function() {
-                            f(e)
-                        })
-                    };
-                    return d.addEventListener && d.addEventListener("load", a),
-                    d.onloadcssdefined = f,
-                    f(a),
-                    d
-                };
-                "undefined" != typeof exports ? exports.loadCSS = t : e.loadCSS = t
-            }("undefined" != typeof global ? global : this),
-            function(e) {
-                if (e.loadCSS) {
-                    var t = loadCSS.relpreload = {};
-                    if (t.support = function() {
-                        try {
-                            return e.document.createElement("link").relList.supports("preload")
-                        } catch (e) {
-                            return !1
-                        }
-                    }
-                    ,
-                    t.poly = function() {
-                        for (var t = e.document.getElementsByTagName("link"), n = 0; n < t.length; n++) {
-                            var r = t[n];
-                            "preload" === r.rel && "style" === r.getAttribute("as") && (e.loadCSS(r.href, r, r.getAttribute("media")),
-                            r.rel = null)
-                        }
-                    }
-                    ,
-                    !t.support()) {
-                        t.poly();
-                        var n = e.setInterval(t.poly, 300);
-                        e.addEventListener && e.addEventListener("load", function() {
-                            t.poly(),
-                            e.clearInterval(n)
-                        }),
-                        e.attachEvent && e.attachEvent("onload", function() {
-                            e.clearInterval(n)
-                        })
-                    }
-                }
-            }(this)
-        </script>
-    </head>
-    <body>
-        <nav class="navbar navbar-fixed-top mainNav collapsed" role="navigation" id="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" id="navbar-toggle">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse" id="navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#about">About</a>
-                        </li>
-                        <li>
-                            <a href="#startups">Startups</a>
-                        </li>
-                        <li>
-                            <a href="#contributions">Contributions</a>
-                        </li>
-                        <li>
-                            <a href="#skills">Skills</a>
-                        </li>
-                        <li>
-                            <a href="#founded">Founded</a>
-                        </li>
-                        <li>
-                            <a href="#resume">Resumé</a>
-                        </li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#444444">
+    <title>Joseph Finlayson</title>
+    <meta name="description" content="Digital Consultant">
+    <meta name="keywords" content="berlin, developer, react, ruby, spring, node, javascript, java">
+    <link href="css/main.css" rel="preload" as="style" onload='this.rel="stylesheet"'>
+    <link href="css/normalize.css" rel="preload" as="style">
+    <noscript>
+        <link href="css/main.css" rel="stylesheet">
+    </noscript>
+    <script src="js/toggle-nav.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-fixed-top mainNav collapsed" role="navigation" id="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" id="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#startups">Startups</a>
+                </li>
+                <li>
+                    <a href="#contributions">Contributions</a>
+                </li>
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+                <li>
+                    <a href="#founded">Founded</a>
+                </li>
+                <li>
+                    <a href="#resume">Resumé</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="main">
+    <div class="component-fullscreen"
+         style="background-color:#f5f5f5;">
+        <canvas id="starfield">
+        </canvas>
+        <div class="container mask">
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-md-offset-3">
+                    <h3 class="text-center funky text-white">Hi, my name's Joseph.</h3>
+                    <p class="text-center lead text-white">
+                        I'm a digital consultant with more than 8 years experience. I live in Berlin and I've worked for
+                        Silicon Allee's biggest brands. <b>I'm
+                        currently considering contracts to lead large scale digital transformations</b>
+                    </p>
                 </div>
             </div>
-        </nav>
-        <div class="main">
-            <div class="component-fullscreen" style="background-color:#f5f5f5;background-image:url(images/backgrounds/jack.jpg)" id="about">
-                <div class="mask"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12 col-md-6 col-md-offset-3">
-                            <h3 class="text-center funky text-white">Hi, my name's Joseph.</h3>
-                            <p class="text-center lead text-white">
-                                I'm a full stack digital consultant with more than x years experience. I live in Berlin, have founded my own successful startups, and worked for Silicon Allee's biggest brands. <b>I'm currently considering contracts in Berlin.</b>
-                            </p>
+        </div>
+
+    </div>
+    <!--<div class="component-fullscreen" style="background-color:#f5f5f5;"-->
+    <!--id="about">-->
+    <!--<div class="mask"></div>-->
+    <!--</div>-->
+    <div class="content" id="startups">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 class="funky text-center mb-3 no-margin-top clearfix">Hall of fame</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="panel panel-default hofItem">
+                        <div class="hofItem_image"
+                             style="background-color:#f5f5f5;background-image:url(images/brands/mckinsey-and-co.jpg)"></div>
+                        <div class="panel-body">
+                            <h5 class="no-margin-top">McKinsey &amp; Company, Digital Consultant</h5>
+                            <p class="no-margin-bottom">Working for clients as part of Digital McKinsey</p>
+                        </div>
+                        <div class="panel-footer">
+                            <small>2016</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="panel panel-default hofItem">
+                        <div class="hofItem_image"
+                             style="background-color:#f5f5f5;background-image:url(images/brands/hubrick.jpg)"></div>
+                        <div class="panel-body">
+                            <h5 class="no-margin-top">Hubrick, Senior Developer</h5>
+                            <p class="no-margin-bottom">Working with React, in an agile environment</p>
+                        </div>
+                        <div class="panel-footer">
+                            <small>2015</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="panel panel-default hofItem no-margin-bottom">
+                        <div class="hofItem_image"
+                             style="background-color:#f5f5f5;background-image:url(images/brands/babelverse.jpg)"></div>
+                        <div class="panel-body">
+                            <h5 class="no-margin-top">Babelverse, Developer</h5>
+                            <p class="no-margin-bottom">First Developer hire</p>
+                        </div>
+                        <div class="panel-footer">
+                            <small>2014</small>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="content" id="startups">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <h4 class="funky text-center mb-3 no-margin-top clearfix">Hall of fame</h4>
+            <div class="row" id="contributions">
+                <div class="col-xs-12">
+                    <h4 class="funky text-center no-margin-top no-margin-bottom sb-3 clearfix">Contributions</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="panel panel-default hofItem">
+                        <div class="hofItem_image"
+                             style="background-color:#f5f5f5;background-image:url(images/brands/codementor.jpg)"></div>
+                        <div class="panel-body">
+                            <h5 class="no-margin-top">Codementor.io, Senior mentor</h5>
+                            <p class="no-margin-bottom">Coaching students all over the world, to become better
+                                developers, and problem solving specific issues</p>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="panel panel-default hofItem">
-                                <div class="hofItem_image" style="background-color:#f5f5f5;background-image:url(images/brands/mckinsey-and-co.jpg)"></div>
-                                <div class="panel-body">
-                                    <h5 class="no-margin-top">McKinsey &amp; Company, Full Stack Digital Consultant</h5>
-                                    <p class="no-margin-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel commodo lectus.</p>
-                                </div>
-                                <div class="panel-footer">
-                                    <small>2016</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="panel panel-default hofItem">
-                                <div class="hofItem_image" style="background-color:#f5f5f5;background-image:url(images/brands/hubrick.jpg)"></div>
-                                <div class="panel-body">
-                                    <h5 class="no-margin-top">Hubrick, Senior Developer</h5>
-                                    <p class="no-margin-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel commodo lectus. Pellentesque vel commodo lectus. Suspendisse condimentum laoreet.</p>
-                                </div>
-                                <div class="panel-footer">
-                                    <small>2015</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="panel panel-default hofItem no-margin-bottom">
-                                <div class="hofItem_image" style="background-color:#f5f5f5;background-image:url(images/brands/babelverse.jpg)"></div>
-                                <div class="panel-body">
-                                    <h5 class="no-margin-top">Babelverse, Developer</h5>
-                                    <p class="no-margin-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel commodo lectus. Pellentesque vel commodo lectus. Suspendisse condimentum laoreet.</p>
-                                </div>
-                                <div class="panel-footer">
-                                    <small>2014</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row" id="contributions">
-                        <div class="col-xs-12">
-                            <h4 class="funky text-center no-margin-top no-margin-bottom sb-3 clearfix">Contributions</h4>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="panel panel-default hofItem">
-                                <div class="hofItem_image" style="background-color:#f5f5f5;background-image:url(images/brands/codementor.jpg)"></div>
-                                <div class="panel-body">
-                                    <h5 class="no-margin-top">Codementor.io, Senior mentor</h5>
-                                    <p class="no-margin-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel commodo lectus. Pellentesque vel commodo lectus. Suspendisse condimentum laoreet.</p>
-                                </div>
-                                <div class="panel-footer">
-                                    <small>2014</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="panel panel-default hofItem">
-                                <div class="hofItem_image" style="background-color:#f5f5f5;background-image:url(images/brands/redi.jpg)"></div>
-                                <div class="panel-body">
-                                    <h5 class="no-margin-top">ReDI School of Digital Integration, Ruby/Rails Instructor</h5>
-                                    <p class="no-margin-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel commodo lectus.</p>
-                                </div>
-                                <div class="panel-footer">
-                                    <small>2016</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="panel panel-default hofItem no-margin-bottom">
-                                <div class="panel-body">
-                                    <h5 class="no-margin-top">Your company?</h5>
-                                    <p class="no-margin-bottom">I could bring a wealth of practical experience and technical expertise to your business. I write clean, pragmatic, maintainable code and communicate clearly. I &#x27;m a team player and want to see my clients succeed.</p>
-                                </div>
-                                <div class="panel-footer">
-                                    <small>Now</small>
-                                </div>
-                            </div>
+                        <div class="panel-footer">
+                            <small>2014</small>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="content" style="background:#f5f5f5" id="skills">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <h4 class="funky text-center no-margin-top mb-3 clearfix">Main skills</h4>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="panel panel-default hofItem">
+                        <div class="hofItem_image"
+                             style="background-color:#f5f5f5;background-image:url(images/brands/redi.jpg)"></div>
+                        <div class="panel-body">
+                            <h5 class="no-margin-top">ReDI School of Digital Integration/Code School at IXDS Ruby/Rails
+                                Instructor</h5>
+                            <p class="no-margin-bottom">Volunteer teacher at a code school targeting refugees,
+                                responsible for curriculum innovation for a team of 10 teachers.</p>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
-                            <h4 class="text-center no-margin-top"> JavaScript, Node JS, React, React Native, Angular JS, Ruby, Java, PHP, SQL, AWS, CSS, HTML, communication, pragmatism, confidence, and learning new systems.</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="content">
-                <div class="container">
-                    <div class="row" id="founded">
-                        <div class="col-xs-12">
-                            <h4 class="funky text-center no-margin-top mb-3 clearfix">Companies founded</h4>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 col-md-6">
-                            <div class="panel panel-default foundedItem">
-                                <div class="foundedItem_image" style="background-image:url(images/projects/3drc2.jpg)"></div>
-                                <div class="panel-body">
-                                    <h5 class="no-margin-top">Lorem Ipsum</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel commodo lectus. Suspendisse condimentum laoreet nisi, eu accumsan enim. Suspendisse neque ante, blandit in leo eu, euismod lacinia mi. </p>
-                                    <p>Suspendisse potenti. Aenean vel nibh molestie, aliquam quam sit amet, dignissim nunc. Phasellus id tortor maximus, pharetra neque nec, posuere nisi.</p>
-                                    <!-- <p class="no-margin-bottom">
-                                        <a href="#">View project</a>
-                                    </p> -->
-                                </div>
-                                <div class="panel-footer">
-                                    <small>2016</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-6">
-                            <div class="panel panel-default foundedItem no-margin-bottom">
-                                <div class="foundedItem_image" style="background-image:url(images/projects/makeme.jpg)"></div>
-                                <div class="panel-body">
-                                    <h5 class="no-margin-top">Lorem Ipsum</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel commodo lectus. Suspendisse condimentum laoreet nisi, eu accumsan enim. Suspendisse neque ante, blandit in leo eu, euismod lacinia mi. </p>
-                                    <p>Suspendisse potenti. Aenean vel nibh molestie, aliquam quam sit amet, dignissim nunc. Phasellus id tortor maximus, pharetra neque nec, posuere nisi.</p>
-                                    <!-- <p class="no-margin-bottom">
-                                        <a href="#">View project</a>
-                                    </p> -->
-                                </div>
-                                <div class="panel-footer">
-                                    <small>2017</small>
-                                </div>
-                            </div>
+                        <div class="panel-footer">
+                            <small>2015 - 16</small>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="content" style="background:#f5f5f5" id="resume">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <h4 class="funky text-center no-margin-top mb-3 clearfix">Resumé</h4>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="panel panel-default hofItem no-margin-bottom">
+                        <div class="panel-body">
+                            <h5 class="no-margin-top">Your company?</h5>
+                            <p class="no-margin-bottom">I could bring a wealth of practical experience and technical
+                                expertise to your business. I write clean, pragmatic, maintainable code and communicate
+                                clearly. I'm a team player and want to see my clients succeed.</p>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-                            <div class="cv-detail">
-                                <div class="cv-right">
-                                    <h4 class="no-margin-top">McKinsey &amp; Company, Full Stack Digital Consultant</h4>
-                                    <p>Java 8, Spring Boot, NodeJS, HapiJS, React Native, React JS, DevOps, AWS Lambda </p>
-                                    <ul class="cv-responsibilities">
-                                    <li>Tech lead and architect at a Czech bank.</li>
-                                    <li>Full stack developer with a major German Insurance client.</li>
-                                    <li>Full Stack and dev-ops developer on innovative, biomechanical Internet of Things project.</li>
-                                    </ul>
-                                </div>
-                                <div class="cv-left">August 2016 - Present</div>
-                            </div>
-                            <div class="cv-detail">
-                                <div class="cv-right">
-                                    <h4>Hubrick, Senior Developer</h4>
-                                    <p>React, RxJS, NodeJS, ES7</p>
-                                    <p>Worked for an e-commerce start-up, responsible for feature deliver, and writing clean, well tested code. Conducted screening interviews, and on-boarded newer candidates.</p>
-                                </div>
-                                <div class="cv-left">July 2015 - July 2016</div>
-                            </div>
-                            <div class="cv-detail">
-                                <div class="cv-right">
-                                    <h4>ReDI School of Digital Integration, Ruby/Rails Instructor</h4>
-                                    <p>Volunteer instructor in Ruby/Ruby on Rails.</p>
-                                </div>
-                                <div class="cv-left">January 2016 - June 2016</div>
-                            </div>
-                            <div class="cv-detail">
-                                <div class="cv-right">
-                                    <h4>Codementor.io, Senior Mentor</h4>
-                                    <p>I coach junior developers remotely in Angular, PHP, and SQL.</p>
-                                    <p><a href="https://www.codementor.io/jfinlays">https://www.codementor.io/jfinlays</a></p>
-                                </div>
-                                <div class="cv-left">September 2014 - September 2015</div>
-                            </div>
-                            <div class="cv-detail">
-                                <div class="cv-right">
-                                    <h4>Hubrick, JS/React Developer</h4>
-                                    <p>Javascript, React</p>
-                                </div>
-                                <div class="cv-left">June 2015 - August 2015 (Contract)</div>
-                            </div>
-                            <div class="cv-detail">
-                                <div class="cv-right">
-                                    <h4>Tquila, Mobile Developer</h4>
-                                    <p>Ionic, SASS</p>
-                                    <p>I worked with the Ionic framework, SASS to create a hybrid mobile app.</p>
-                                </div>
-                                <div class="cv-left">January 2015 - June 2015</div>
-                            </div>
-                            <div class="cv-detail">
-                                <div class="cv-right">
-                                    <h4>Babelverse, Developer</h4>
-                                    <p>NodeJS, AngularJS</p>
-                                    <p>I worked in AngularJS and Node to create scalable web apps.</p>
-                                </div>
-                                <div class="cv-left">September 2014 - January 2015</div>
-                            </div>
-                            <div class="cv-detail">
-                                <div class="cv-right">
-                                    <h4>BS</h4>
-                                    <p>Studied at University of Leeds in UK.</p>
-                                </div>
-                                <div class="cv-left">2007 - 2011</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="content" id="contact">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <h4 class="funky text-center no-margin-top mb-3">Contact</h4>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-                            <div class="contact text-center">
-                                <a href="mailto:joseph.finlayson@gmail.com">Email</a>
-                                <a target="_blank" href="https://www.linkedin.com/in/zzzzzzzzzzzzzzzzzzzzzzzzzzzz/">LinkedIn</a>
-                                <a target="_blank" href="https://github.com/josephfinlayson">Github</a>
-                            </div>
+                        <div class="panel-footer">
+                            <small>Now</small>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script src="js/bundle.js"></script>
-        <script>
-        // @todo: uncomment when an id is available
-        /*
-            !function(e, t, a, n, c, o, s) {
-                e.GoogleAnalyticsObject = c,
-                e[c] = e[c] || function() {
-                    (e[c].q = e[c].q || []).push(arguments)
-                }
-                ,
-                e[c].l = 1 * new Date,
-                o = t.createElement(a),
-                s = t.getElementsByTagName(a)[0],
-                o.async = 1,
-                o.src = "https://www.google-analytics.com/analytics.js",
-                s.parentNode.insertBefore(o, s)
-            }(window, document, "script", 0, "ga"),
-            ga("create", "UA-79895712-7", "auto"),
-            ga("send", "pageview")*/
-        </script>
-    </body>
+    </div>
+    <div class="content" style="background:#f5f5f5" id="skills">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 class="funky text-center no-margin-top mb-3 clearfix">Main skills</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+                    <h4 class="text-center no-margin-top"> Team lead and architect. Practical technical experience:
+                        JavaScript, NodeJS, React, React Native, Angular JS, Ruby,
+                        Java, Docker, K8s, PHP, SQL, AWS, CSS, HTML, communication, pragmatism, confidence, and learning
+                        new
+                        systems.</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="content">-->
+    <!--<div class="container">-->
+    <!--<div class="row" id="founded">-->
+    <!--<div class="col-xs-12">-->
+    <!--<h4 class="funky text-center no-margin-top mb-3 clearfix">Companies founded</h4>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+    <!--<div class="col-xs-12 col-md-6">-->
+    <!--<div class="panel panel-default foundedItem">-->
+    <!--<div class="foundedItem_image" style="background-image:url(images/projects/3drc2.jpg)"></div>-->
+    <!--<div class="panel-body">-->
+    <!--<h5 class="no-margin-top">Lorem Ipsum</h5>-->
+    <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel commodo lectus.-->
+    <!--Suspendisse condimentum laoreet nisi, eu accumsan enim. Suspendisse neque ante, blandit-->
+    <!--in leo eu, euismod lacinia mi. </p>-->
+    <!--<p>Suspendisse potenti. Aenean vel nibh molestie, aliquam quam sit amet, dignissim nunc.-->
+    <!--Phasellus id tortor maximus, pharetra neque nec, posuere nisi.</p>-->
+    <!--&lt;!&ndash; <p class="no-margin-bottom">-->
+    <!--<a href="#">View project</a>-->
+    <!--</p> &ndash;&gt;-->
+    <!--</div>-->
+    <!--<div class="panel-footer">-->
+    <!--<small>2016</small>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-xs-12 col-md-6">-->
+    <!--<div class="panel panel-default foundedItem no-margin-bottom">-->
+    <!--<div class="foundedItem_image" style="background-image:url(images/projects/makeme.jpg)"></div>-->
+    <!--<div class="panel-body">-->
+    <!--<h5 class="no-margin-top">Lorem Ipsum</h5>-->
+    <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel commodo lectus.-->
+    <!--Suspendisse condimentum laoreet nisi, eu accumsan enim. Suspendisse neque ante, blandit-->
+    <!--in leo eu, euismod lacinia mi. </p>-->
+    <!--<p>Suspendisse potenti. Aenean vel nibh molestie, aliquam quam sit amet, dignissim nunc.-->
+    <!--Phasellus id tortor maximus, pharetra neque nec, posuere nisi.</p>-->
+    <!--&lt;!&ndash; <p class="no-margin-bottom">-->
+    <!--<a href="#">View project</a>-->
+    <!--</p> &ndash;&gt;-->
+    <!--</div>-->
+    <!--<div class="panel-footer">-->
+    <!--<small>2017</small>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <div class="content" style="background:#f5f5f5" id="resume">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 class="funky text-center no-margin-top mb-3 clearfix">Resumé</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                    <div class="cv-detail">
+                        <div class="cv-right">
+                            <h4 class="no-margin-top">McKinsey &amp; Company, Digital Consultant</h4>
+                            <p>Java 8, Spring Boot, NodeJS, HapiJS, React Native, React JS, DevOps, AWS Lambda </p>
+                            <ul class="cv-responsibilities">
+                                <li>Technical/DevOps lead for 10 teams (~100 developers) at Major Russian bank. -
+                                    Moscow
+                                </li>
+                                <li>Tech lead and architect at a Czech bank. - Prague</li>
+                                <li>Full stack developer with a major German Insurance client. - Berlin</li>
+                                <li>Full Stack and DevOps developer on innovative, biomechanical Internet of Things
+                                    project. - Berlin
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cv-left">August 2016 - Present</div>
+                    </div>
+                    <div class="cv-detail">
+                        <div class="cv-right">
+                            <h4>Hubrick, Senior Developer</h4>
+                            <p>React, RxJS, NodeJS, ES7, Docker, Node in a Spring Boot led environment</p>
+                            <ul class="cv-responsibilities">
+                                <li>Feature Delivery, unit and UI automation test</li>
+                                <li>Interview Screening, and onboarding</li>
+                                <li>Frontend data architecture</li>
+
+                            </ul>
+                        </div>
+                        <div class="cv-left">July 2015 - July 2016</div>
+                    </div>
+                    <div class="cv-detail">
+                        <div class="cv-right">
+                            <h4>ReDI School of Digital Integration, Ruby/Rails Instructor</h4>
+                            <p>Volunteer instructor in Ruby/Ruby on Rails.</p>
+                        </div>
+                        <div class="cv-left">January 2016 - June 2016</div>
+                    </div>
+                    <div class="cv-detail">
+                        <div class="cv-right">
+                            <h4>Codementor.io, Senior Mentor</h4>
+                            <p>I coach junior developers remotely in Angular, PHP, and SQL.</p>
+                            <p><a href="https://www.codementor.io/jfinlays">https://www.codementor.io/jfinlays</a></p>
+                        </div>
+                        <div class="cv-left">September 2014 - September 2015</div>
+                    </div>
+                    <div class="cv-detail">
+                        <div class="cv-right">
+                            <h4>Hubrick, JS/React Developer</h4>
+                            <p>Javascript, React</p>
+                        </div>
+                        <div class="cv-left">June 2015 - August 2015 (Contract)</div>
+                    </div>
+                    <div class="cv-detail">
+                        <div class="cv-right">
+                            <h4>Tquila, Mobile Developer</h4>
+                            <p>Ionic, SASS</p>
+                            <p>I worked with the Ionic framework, SASS to create a hybrid mobile app.</p>
+                        </div>
+                        <div class="cv-left">January 2015 - June 2015</div>
+                    </div>
+                    <div class="cv-detail">
+                        <div class="cv-right">
+                            <h4>Babelverse, Developer</h4>
+                            <p>NodeJS, AngularJS</p>
+                            <p>I worked in AngularJS and Node to create scalable web apps.</p>
+                        </div>
+                        <div class="cv-left">September 2014 - January 2015</div>
+                    </div>
+
+                    <div class="cv-detail">
+                        <div class="cv-right">
+                            <h4>Accenture, Tech Consultant</h4>
+                            <div class="cv-left">2010 - 2014</div>
+                        </div>
+                        <div class="cv-detail">
+                            <div class="cv-right">
+                                <h4>BS</h4>
+                                <p>Studied at University of Leeds in the UK.</p>
+                            </div>
+                            <div class="cv-left">2007 - 2010</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h4 class="funky text-center no-margin-top mb-3">Contact</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                        <div class="contact text-center">
+                            <a href="mailto:joseph.finlayson@gmail.com">Email</a>
+                            <a target="_blank"
+                               href="https://www.linkedin.com/in/zzzzzzzzzzzzzzzzzzzzzzzzzzzz/">LinkedIn</a>
+                            <a target="_blank" href="https://github.com/josephfinlayson">Github</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/bundle.js"></script>
+<script src="js/starfield.js"></script>
+<script>
+  // @todo: uncomment when an id is available
+  /*
+      !function(e, t, a, n, c, o, s) {
+          e.GoogleAnalyticsObject = c,
+          e[c] = e[c] || function() {
+              (e[c].q = e[c].q || []).push(arguments)
+          }
+          ,
+          e[c].l = 1 * new Date,
+          o = t.createElement(a),
+          s = t.getElementsByTagName(a)[0],
+          o.async = 1,
+          o.src = "https://www.google-analytics.com/analytics.js",
+          s.parentNode.insertBefore(o, s)
+      }(window, document, "script", 0, "ga"),
+      ga("create", "UA-79895712-7", "auto"),
+      ga("send", "pageview")*/
+</script>
+</body>
 </html>

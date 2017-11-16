@@ -8088,7 +8088,8 @@ input[type="checkbox"]:disabled:checked:after,.checkbox input[type="checkbox"]:d
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.38)
+    display: flex;
+    align-items: center;
 }
 
 .text-white {
@@ -8193,12 +8194,12 @@ input[type="checkbox"]:disabled:checked:after,.checkbox input[type="checkbox"]:d
     text-align: justify
 }
 
-.navbar-white .navbar {
-    background: white !important
+.navbar-black .navbar {
+    background: black !important
 }
 
-.navbar-white .navbar li a {
-    color: #444 !important
+.navbar-black .navbar li a {
+    /*color: #444 !important*/
 }
 
 .navbar {
