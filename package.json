@@ -2,5 +2,22 @@
   "dependencies": {
     "global": "^4.3.2",
     "serve": "^6.4.1"
-  }
+  },
+  "name": "personal-website",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sync": "aws s3 sync . s3://jfinlays --exclude \".git/*\"",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephfinlayson/personal-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josephfinlayson/personal-website/issues"
+  },
+  "homepage": "https://github.com/josephfinlayson/personal-website#readme"
 }
