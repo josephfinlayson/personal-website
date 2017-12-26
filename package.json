@@ -8,7 +8,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sync": "aws s3 sync . s3://jfinlays --exclude \".git/*\"",
+    "sync": "aws s3 sync . s3://josephfinlayson.com --exclude \".git/*\"",
   },
   "repository": {
     "type": "git",
