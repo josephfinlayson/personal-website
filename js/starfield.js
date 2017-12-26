@@ -11,14 +11,18 @@ if (!window.requestAnimationFrame) {
       return window.setTimeout(callback, 17);
     });
 }
+
+
+
 var ngn = {};
 ngn.setup = function () {
   if (!window.innerWidth) {
     setTimeout(ngn.setup, 500);
     return;
   }
-  var w = window.innerWidth;
-  var h = window.innerHeight;
+
+  var w = document.querySelector('.component-fullscreen').clientWidth;
+  var h = window.innerHeight ;
   var cw = w / 2;
   var ch = h / 2;
 
