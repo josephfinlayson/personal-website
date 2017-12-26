@@ -10,7 +10,7 @@
   "main": "index.js",
   "scripts": {
     "start": "http-server .",
-    "sync": "aws s3 sync . s3://josephfinlayson.com --exclude \".git/*\""
+    "sync": "aws s3 sync . s3://josephfinlayson.com --exclude \".git/*\" --exclude \"node_modules/*\""
   },
   "repository": {
     "type": "git",
