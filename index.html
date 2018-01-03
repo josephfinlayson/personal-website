@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#444444">
+    <title>Joseph Finlayson</title>
+    <meta name="description" content="Digital Consultant">
+    <meta name="keywords" content="berlin, developer, react, ruby, spring, node, javascript, java">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="js/toggle-nav.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-fixed-top mainNav collapsed" role="navigation" id="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" id="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#startups">Startups</a>
+                </li>
+                <li>
+                    <a href="#contributions">Contributions</a>
+                </li>
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+                <li>
+                    <a href="#resume">Resumé</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="main">
+    <div class="component-fullscreen"
+         style="background-color:#f5f5f5;">
+        <canvas id="starfield">
+        </canvas>
+        <div class="container mask">
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-md-offset-3">
+                    <h3 class="text-center funky text-white">Hi, my name's Joseph.</h3>
+                    <p class="text-center lead text-white">
+                        I'm a digital consultant with more than 8 years experience. I live in Berlin and I've worked for
+                        Silicon Allee's biggest brands. <b>I'm
+                        currently considering contracts to lead large scale digital transformations</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content" id="startups">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 class="funky text-center mb-3 no-margin-top clearfix">Hall of fame</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="panel panel-default hofItem">
+                        <div class="hofItem_image"
+                             style="background-color:#f5f5f5;background-image:url(images/brands/mckinsey-and-co.jpg)"></div>
+                        <div class="panel-body">
+                            <h5 class="no-margin-top">McKinsey &amp; Company, Digital Consultant</h5>
+                            <p class="no-margin-bottom">Working for clients as part of Digital McKinsey</p>
+                        </div>
+                        <div class="panel-footer">
+                            <small>2016</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="panel panel-default hofItem">
+                        <div class="hofItem_image"
+                             style="background-color:#f5f5f5;background-image:url(images/brands/hubrick.jpg)"></div>
+                        <div class="panel-body">
+                            <h5 class="no-margin-top">Hubrick, Senior Developer</h5>
+                            <p class="no-margin-bottom">Working with React, in an agile environment</p>
+                        </div>
+                        <div class="panel-footer">
+                            <small>2015</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="panel panel-default hofItem no-margin-bottom">
+                        <div class="hofItem_image"
+                             style="background-color:#f5f5f5;background-image:url(images/brands/babelverse.jpg)"></div>
+                        <div class="panel-body">
+                            <h5 class="no-margin-top">Babelverse, Developer</h5>
+                            <p class="no-margin-bottom">First Developer hire</p>
+                        </div>
+                        <div class="panel-footer">
+                            <small>2014</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="contributions">
+                <div class="col-xs-12">
+                    <h4 class="funky text-center no-margin-top no-margin-bottom sb-3 clearfix">Contributions</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="panel panel-default hofItem">
+                        <div class="hofItem_image"
+                             style="background-color:#f5f5f5;background-image:url(images/brands/codementor.jpg)"></div>
+                        <div class="panel-body">
+                            <h5 class="no-margin-top">Codementor.io, Senior mentor</h5>
+                            <p class="no-margin-bottom">Coaching students all over the world, to become better
+                                developers, and problem solving specific issues</p>
+                        </div>
+                        <div class="panel-footer">
+                            <small>2014</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="panel panel-default hofItem">
+                        <div class="hofItem_image"
+                             style="background-color:#f5f5f5;background-image:url(images/brands/redi.jpg)"></div>
+                        <div class="panel-body">
+                            <h5 class="no-margin-top">ReDI School of Digital Integration/Code School at IXDS Ruby/Rails
+                                Instructor</h5>
+                            <p class="no-margin-bottom">Volunteer teacher at a code school targeting refugees,
+                                responsible for curriculum innovation for a team of 10 teachers.</p>
+                        </div>
+                        <div class="panel-footer">
+                            <small>2015 - 16</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="panel panel-default hofItem no-margin-bottom">
+                        <div class="panel-body">
+                            <h5 class="no-margin-top">Your company?</h5>
+                            <p class="no-margin-bottom">I could bring a wealth of practical experience and technical
+                                expertise to your business. I write clean, pragmatic, maintainable code and communicate
+                                clearly. I'm a team player and want to see my clients succeed.</p>
+                        </div>
+                        <div class="panel-footer">
+                            <small>Now</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content" style="background:#f5f5f5" id="skills">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 class="funky text-center no-margin-top mb-3 clearfix">Main skills</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+                    <h4 class="text-center no-margin-top"> Team lead and architect. Practical technical experience:
+                        JavaScript, NodeJS, React, React Native, Angular JS, Ruby,
+                        Java, Docker, K8s, PHP, SQL, AWS, CSS, HTML, communication, pragmatism, confidence, and learning
+                        new
+                        systems.</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="content">-->
+    <!--<div class="container">-->
+    <!--<div class="row" id="founded">-->
+    <!--<div class="col-xs-12">-->
+    <!--<h4 class="funky text-center no-margin-top mb-3 clearfix">Companies founded</h4>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+    <!--<div class="col-xs-12 col-md-6">-->
+    <!--<div class="panel panel-default foundedItem">-->
+    <!--<div class="foundedItem_image" style="background-image:url(images/projects/3drc2.jpg)"></div>-->
+    <!--<div class="panel-body">-->
+    <!--<h5 class="no-margin-top">Lorem Ipsum</h5>-->
+    <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel commodo lectus.-->
+    <!--Suspendisse condimentum laoreet nisi, eu accumsan enim. Suspendisse neque ante, blandit-->
+    <!--in leo eu, euismod lacinia mi. </p>-->
+    <!--<p>Suspendisse potenti. Aenean vel nibh molestie, aliquam quam sit amet, dignissim nunc.-->
+    <!--Phasellus id tortor maximus, pharetra neque nec, posuere nisi.</p>-->
+    <!--&lt;!&ndash; <p class="no-margin-bottom">-->
+    <!--<a href="#">View project</a>-->
+    <!--</p> &ndash;&gt;-->
+    <!--</div>-->
+    <!--<div class="panel-footer">-->
+    <!--<small>2016</small>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-xs-12 col-md-6">-->
+    <!--<div class="panel panel-default foundedItem no-margin-bottom">-->
+    <!--<div class="foundedItem_image" style="background-image:url(images/projects/makeme.jpg)"></div>-->
+    <!--<div class="panel-body">-->
+    <!--<h5 class="no-margin-top">Lorem Ipsum</h5>-->
+    <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel commodo lectus.-->
+    <!--Suspendisse condimentum laoreet nisi, eu accumsan enim. Suspendisse neque ante, blandit-->
+    <!--in leo eu, euismod lacinia mi. </p>-->
+    <!--<p>Suspendisse potenti. Aenean vel nibh molestie, aliquam quam sit amet, dignissim nunc.-->
+    <!--Phasellus id tortor maximus, pharetra neque nec, posuere nisi.</p>-->
+    <!--&lt;!&ndash; <p class="no-margin-bottom">-->
+    <!--<a href="#">View project</a>-->
+    <!--</p> &ndash;&gt;-->
+    <!--</div>-->
+    <!--<div class="panel-footer">-->
+    <!--<small>2017</small>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <div class="content" style="background:#f5f5f5" id="resume">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 class="funky text-center no-margin-top mb-3 clearfix">Resumé</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                    <div class="cv-detail">
+                        <div class="cv-right">
+                            <h4 class="no-margin-top">McKinsey &amp; Company, Digital Consultant</h4>
+                            <p>Java 8, Spring Boot, NodeJS, HapiJS, React Native, React JS, DevOps, AWS Lambda </p>
+                            <ul class="cv-responsibilities">
+                                <li>Technical/DevOps lead for 10 teams (~100 developers) at Major Russian bank. -
+                                    Moscow
+                                </li>
+                                <li>Tech lead and architect at a Czech bank. - Prague</li>
+                                <li>Full stack developer with a major German Insurance client. - Berlin</li>
+                                <li>Full Stack and DevOps developer on innovative, biomechanical Internet of Things
+                                    project. - Berlin
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cv-left">August 2016 - Present</div>
+                    </div>
+                    <div class="cv-detail">
+                        <div class="cv-right">
+                            <h4>Hubrick, Senior Developer</h4>
+                            <p>React, RxJS, NodeJS, ES7, Docker, Node in a Spring Boot led environment</p>
+                            <ul class="cv-responsibilities">
+                                <li>Feature Delivery, unit and UI automation test</li>
+                                <li>Interview Screening, and onboarding</li>
+                                <li>Frontend data architecture</li>
+
+                            </ul>
+                        </div>
+                        <div class="cv-left">July 2015 - July 2016</div>
+                    </div>
+                    <div class="cv-detail">
+                        <div class="cv-right">
+                            <h4>ReDI School of Digital Integration, Ruby/Rails Instructor</h4>
+                            <p>Volunteer instructor in Ruby/Ruby on Rails.</p>
+                        </div>
+                        <div class="cv-left">January 2016 - June 2016</div>
+                    </div>
+                    <div class="cv-detail">
+                        <div class="cv-right">
+                            <h4>Codementor.io, Senior Mentor</h4>
+                            <p>I coach junior developers remotely in Angular, PHP, and SQL.</p>
+                            <p><a href="https://www.codementor.io/jfinlays">https://www.codementor.io/jfinlays</a></p>
+                        </div>
+                        <div class="cv-left">September 2014 - September 2015</div>
+                    </div>
+                    <div class="cv-detail">
+                        <div class="cv-right">
+                            <h4>Hubrick, JS/React Developer</h4>
+                            <p>Javascript, React</p>
+                        </div>
+                        <div class="cv-left">June 2015 - August 2015 (Contract)</div>
+                    </div>
+                    <div class="cv-detail">
+                        <div class="cv-right">
+                            <h4>Tquila, Mobile Developer</h4>
+                            <p>Ionic, SASS</p>
+                            <p>I worked with the Ionic framework, SASS to create a hybrid mobile app.</p>
+                        </div>
+                        <div class="cv-left">January 2015 - June 2015</div>
+                    </div>
+                    <div class="cv-detail">
+                        <div class="cv-right">
+                            <h4>Babelverse, Developer</h4>
+                            <p>NodeJS, AngularJS</p>
+                            <p>I worked in AngularJS and Node to create scalable web apps.</p>
+                        </div>
+                        <div class="cv-left">September 2014 - January 2015</div>
+                    </div>
+
+                    <div class="cv-detail">
+                        <div class="cv-right">
+                            <h4>Accenture, Tech Consultant</h4>
+                            <div class="cv-left">2010 - 2014</div>
+                        </div>
+                        <div class="cv-detail">
+                            <div class="cv-right">
+                                <h4>BS</h4>
+                                <p>Studied at University of Leeds in the UK.</p>
+                            </div>
+                            <div class="cv-left">2007 - 2010</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h4 class="funky text-center no-margin-top mb-3">Contact</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                        <div class="contact text-center">
+                            <a href="mailto:joseph.finlayson@gmail.com">Email</a>
+                            <a target="_blank"
+                               href="https://www.linkedin.com/in/zzzzzzzzzzzzzzzzzzzzzzzzzzzz/">LinkedIn</a>
+                            <a target="_blank" href="https://github.com/josephfinlayson">Github</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/bundle.js"></script>
+<script src="js/starfield.js"></script>
+<script>
+    // @todo: uncomment when an id is available
+    /*
+        !function(e, t, a, n, c, o, s) {
+            e.GoogleAnalyticsObject = c,
+            e[c] = e[c] || function() {
+                (e[c].q = e[c].q || []).push(arguments)
+            }
+            ,
+            e[c].l = 1 * new Date,
+            o = t.createElement(a),
+            s = t.getElementsByTagName(a)[0],
+            o.async = 1,
+            o.src = "https://www.google-analytics.com/analytics.js",
+            s.parentNode.insertBefore(o, s)
+        }(window, document, "script", 0, "ga"),
+        ga("create", "UA-79895712-7", "auto"),
+        ga("send", "pageview")*/
+</script>
+</body>
+</html>
