@@ -43,7 +43,7 @@
 }([function(e, n) {
     !function() {
         function e() {
-            window.scrollY > window.innerHeight / 3 ? document.body.classList.add(n) : document.body.classList.remove(n)
+            window.pageYOffset > window.innerHeight / 3 ? document.body.classList.add(n) : document.body.classList.remove(n)
         }
         var n = "navbar-black";
         document.addEventListener("scroll", function(n) {
