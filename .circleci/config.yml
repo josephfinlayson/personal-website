@@ -5,9 +5,13 @@ jobs:
     docker:
       - image: circleci/python:2.7-jessie
     steps:
+      - checkout
       - run:
           name: Install awscli
           command: sudo pip install awscli
+      - run:
+          name: Where are we?
+          command: ls -la
       - run:
           name: Deploy to S3
           command: aws s3 sync . s3://josephfinlayson.com --exclude \".git/*\" --exclude \"node_modules/*\"
