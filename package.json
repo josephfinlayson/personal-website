@@ -9,8 +9,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "http-server .",
-    "sync": "aws s3 sync . s3://josephfinlayson.com --exclude \".git/*\" --exclude \"node_modules/*\""
+    "start": "http-server ."
   },
   "repository": {
     "type": "git",

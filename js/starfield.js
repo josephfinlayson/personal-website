@@ -2,6 +2,8 @@ console.log("Great you're looking at my code, but this isn't normally what I'd d
 
 // to monitor window width modification and repaint
 
+const black = "#000";
+const white = "#fff"
 if (!window.requestAnimationFrame) {
   window.requestAnimationFrame = (window.webkitRequestAnimationFrame ||
     window.mozRequestAnimationFrame ||
@@ -31,8 +33,8 @@ ngn.setup = function () {
   canvas.width = w;
   canvas.height = h;
   var canvasContext = canvas.getContext("2d");
-  canvasContext.fillStyle = "#000";
-  canvasContext.strokeStyle = "#fff";
+  canvasContext.fillStyle = white
+  canvasContext.strokeStyle = black;
   canvasContext.globalAlpha = 0.5;
   canvasContext.translate(cw, ch);
   var p = 10;
